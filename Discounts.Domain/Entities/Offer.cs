@@ -1,6 +1,8 @@
-﻿namespace Discounts.Domain.Entities;
+﻿using Discounts.Domain.Enums;
 
-public class Offers : BaseEntity
+namespace Discounts.Domain.Entities;
+
+public class Offer : BaseEntity
 {
     public string Name { get; set; } = string.Empty;
     public string? Description { get; set; }
@@ -13,6 +15,7 @@ public class Offers : BaseEntity
     public string? ImageUrl { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
+    public OfferStatus Status { get; set; }
     
     public Merchant Merchant { get; set; } // Navigation Property
     public Category Category { get; set; } // Navigation Property
