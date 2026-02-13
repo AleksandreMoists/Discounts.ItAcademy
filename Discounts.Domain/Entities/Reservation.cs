@@ -1,8 +1,7 @@
 ﻿namespace Discounts.Domain.Entities;
 
-public class Reservation
+public class Reservation : BaseEntity
 {
-    public int Id { get; set; } 
     public int OfferId { get; set; }
     public int CustomerId { get; set; }
     public DateTime ReservationDate { get; set; }

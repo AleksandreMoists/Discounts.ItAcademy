@@ -1,8 +1,7 @@
 ﻿namespace Discounts.Domain.Entities;
 
-public class Offers
+public class Offers : BaseEntity
 {
-    public int Id { get; set; }
     public string Name { get; set; } = string.Empty;
     public string? Description { get; set; }
     public decimal OriginalPrice { get; set; }

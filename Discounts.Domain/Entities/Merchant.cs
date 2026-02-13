@@ -1,8 +1,7 @@
 ﻿namespace Discounts.Domain.Entities;
 
-public class Merchant
+public class Merchant : BaseEntity
 {
-    public int Id { get; set; }
     public string Name { get; set; } = string.Empty;
     public string Address { get; set; } = string.Empty;
     public string EmailAddress { get; set; } = string.Empty;
