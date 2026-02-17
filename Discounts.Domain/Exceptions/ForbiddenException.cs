@@ -1,8 +1,8 @@
-﻿namespace Discounts.Domain.Exceptions;
+namespace Discounts.Domain.Exceptions;
 
-public class ForbiddenException
+public class ForbiddenException : Exception
 {
     public ForbiddenException() { }
-    public ForbiddenException(string message) { }
-    public ForbiddenException(string message, Exception innerException) { }
+    public ForbiddenException(string message) : base(message) { }
+    public ForbiddenException(string message, Exception innerException) : base(message, innerException) { }
 }
