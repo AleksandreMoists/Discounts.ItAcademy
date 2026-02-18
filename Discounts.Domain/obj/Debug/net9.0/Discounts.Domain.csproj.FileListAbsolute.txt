@@ -1,0 +1,12 @@
+C:\Users\aleks\RiderProjects\WebApplication1\Discounts.Domain\bin\Debug\net9.0\Discounts.Domain.deps.json
+C:\Users\aleks\RiderProjects\WebApplication1\Discounts.Domain\bin\Debug\net9.0\Discounts.Domain.dll
+C:\Users\aleks\RiderProjects\WebApplication1\Discounts.Domain\bin\Debug\net9.0\Discounts.Domain.pdb
+C:\Users\aleks\RiderProjects\WebApplication1\Discounts.Domain\obj\Debug\net9.0\Discounts.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleks\RiderProjects\WebApplication1\Discounts.Domain\obj\Debug\net9.0\Discounts.Domain.AssemblyInfoInputs.cache
+C:\Users\aleks\RiderProjects\WebApplication1\Discounts.Domain\obj\Debug\net9.0\Discounts.Domain.AssemblyInfo.cs
+C:\Users\aleks\RiderProjects\WebApplication1\Discounts.Domain\obj\Debug\net9.0\Discounts.Domain.csproj.CoreCompileInputs.cache
+C:\Users\aleks\RiderProjects\WebApplication1\Discounts.Domain\obj\Debug\net9.0\Discounts.Domain.sourcelink.json
+C:\Users\aleks\RiderProjects\WebApplication1\Discounts.Domain\obj\Debug\net9.0\Discounts.Domain.dll
+C:\Users\aleks\RiderProjects\WebApplication1\Discounts.Domain\obj\Debug\net9.0\refint\Discounts.Domain.dll
+C:\Users\aleks\RiderProjects\WebApplication1\Discounts.Domain\obj\Debug\net9.0\Discounts.Domain.pdb
+C:\Users\aleks\RiderProjects\WebApplication1\Discounts.Domain\obj\Debug\net9.0\ref\Discounts.Domain.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Discounts.Domain/1.0.0": {
+        "runtime": {
+          "Discounts.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Discounts.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
