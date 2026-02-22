@@ -1,0 +1,47 @@
+@model IEnumerable<OfferResponseDto>
+
+@{
+    ViewData["Title"] = "Offers";
+}
+
+<h1>Offers</h1>
+<p><a asp-action="Create" class="btn btn-primary">Create New Offer</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Original Price</th>
+            <th>Discount Price</th>
+            <th>Category</th>
+            <th>Merchant</th>
+            <th>Status</th>
+            <th>Remaining</th>
+            <th>End Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var offer in Model)
+        {
+            <tr>
+                <td>@offer.Name</td>
+                <td>@offer.OriginalPrice.ToString("C")</td>
+                <td>@offer.DiscountPrice.ToString("C")</td>
+                <td>@offer.CategoryName</td>
+                <td>@offer.MerchantName</td>
+                <td><span class="badge bg-info">@offer.Status</span></td>
+                <td>@offer.RemainingCoupons / @offer.TotalCoupons</td>
+                <td>@offer.EndDate.ToString("d")</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@offer.Id" class="btn btn-sm btn-outline-primary">Details</a>
+                    <a asp-action="Edit" asp-route-id="@offer.Id" class="btn btn-sm btn-outline-secondary">Edit</a>
+                    <form asp-action="Delete" asp-route-id="@offer.Id" method="post" class="d-inline">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

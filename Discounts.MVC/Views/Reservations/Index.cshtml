@@ -1,0 +1,42 @@
+@model IEnumerable<ReservationResponseDto>
+
+@{
+    ViewData["Title"] = "Reservations";
+}
+
+<h1>Reservations</h1>
+<p><a asp-action="Create" class="btn btn-primary">Create New Reservation</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Offer</th>
+            <th>Customer ID</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reservation in Model)
+        {
+            <tr>
+                <td>@reservation.OfferName</td>
+                <td>@reservation.CustomerId</td>
+                <td>@reservation.Quantity</td>
+                <td>@reservation.TotalPrice.ToString("C")</td>
+                <td><span class="badge bg-info">@reservation.Status</span></td>
+                <td>@reservation.ReservationDate.ToString("g")</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@reservation.Id" class="btn btn-sm btn-outline-primary">Details</a>
+                    <form asp-action="Delete" asp-route-id="@reservation.Id" method="post" class="d-inline">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

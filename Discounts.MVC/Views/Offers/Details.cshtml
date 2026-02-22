@@ -1,0 +1,35 @@
+@model OfferResponseDto
+
+@{
+    ViewData["Title"] = "Offer Details";
+}
+
+<h1>@Model.Name</h1>
+
+<div class="card">
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Description</dt>
+            <dd class="col-sm-9">@(Model.Description ?? "N/A")</dd>
+            <dt class="col-sm-3">Original Price</dt>
+            <dd class="col-sm-9">@Model.OriginalPrice.ToString("C")</dd>
+            <dt class="col-sm-3">Discount Price</dt>
+            <dd class="col-sm-9">@Model.DiscountPrice.ToString("C")</dd>
+            <dt class="col-sm-3">Category</dt>
+            <dd class="col-sm-9">@Model.CategoryName</dd>
+            <dt class="col-sm-3">Merchant</dt>
+            <dd class="col-sm-9">@Model.MerchantName</dd>
+            <dt class="col-sm-3">Status</dt>
+            <dd class="col-sm-9"><span class="badge bg-info">@Model.Status</span></dd>
+            <dt class="col-sm-3">Coupons</dt>
+            <dd class="col-sm-9">@Model.RemainingCoupons / @Model.TotalCoupons remaining</dd>
+            <dt class="col-sm-3">Period</dt>
+            <dd class="col-sm-9">@Model.StartDate.ToString("d") - @Model.EndDate.ToString("d")</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

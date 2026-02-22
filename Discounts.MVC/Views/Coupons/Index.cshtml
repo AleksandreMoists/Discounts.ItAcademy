@@ -1,0 +1,38 @@
+@model IEnumerable<CouponResponseDto>
+
+@{
+    ViewData["Title"] = "Coupons";
+}
+
+<h1>Coupons</h1>
+<p><a asp-action="Create" class="btn btn-primary">Create New Coupon</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Discount</th>
+            <th>Status</th>
+            <th>Offer</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var coupon in Model)
+        {
+            <tr>
+                <td><code>@coupon.Code</code></td>
+                <td>@coupon.Discount.ToString("C")</td>
+                <td><span class="badge bg-info">@coupon.Status</span></td>
+                <td>@coupon.OfferName</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@coupon.Id" class="btn btn-sm btn-outline-secondary">Edit</a>
+                    <form asp-action="Delete" asp-route-id="@coupon.Id" method="post" class="d-inline">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
